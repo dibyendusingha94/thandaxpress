@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThandaXpress - Cold Drinks Delivered Fast</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+
+      <div class="logo-box">
+        <!-- Replace logo.png with your actual logo -->
+        <img src="logo.png" alt="ThandaXpress Logo" class="logo">
+      </div>
+
+      <div class="location">
+        <span>📍</span>
+        <div>
+          <small>Delivery in 10 minutes</small>
+          <strong>Your Location ▼</strong>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search cold drinks, chips, soda..."
+        >
+        <span>🔍</span>
+      </div>
+
+      <button class="login-btn">👤 Login</button>
+
+      <button class="cart-btn" onclick="openCart()">
+        🛒 Cart <span id="cartCount">0</span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="delivery-tag">⚡ SUPER FAST DELIVERY</p>
+      <h1>THANDA LAGBE?</h1>
+      <h2>THANDAXPRESS ACHE! 🧊</h2>
+
+      <p>
+        Cold Drinks, Chips, Smoking & Soda Water
+        delivered fast to your doorstep.
+      </p>
+
+      <button onclick="scrollToProducts()">Shop Now →</button>
+    </div>
+
+    <div class="hero-visual">
+      <div class="ice">🧊</div>
+      <div class="drinks">🥤 🥤 🥤</div>
+      <div class="ice">🧊</div>
+    </div>
+  </section>
+
+
+  <!-- CATEGORIES -->
+  <section class="categories-section">
+    <div class="section-heading">
+      <h2>Shop by Category</h2>
+    </div>
+
+    <div class="categories">
+
+      <div class="category-card cold" onclick="filterCategory('Cold Drinks')">
+        <div class="category-icon">🥤</div>
+        <h3>Cold Drinks</h3>
+        <p>Stay Cool Always!</p>
+      </div>
+
+      <div class="category-card chips" onclick="filterCategory('Chips')">
+        <div class="category-icon">🍟</div>
+        <h3>Chips & Snacks</h3>
+        <p>Munch More!</p>
+      </div>
+
+      <div class="category-card smoking" onclick="filterCategory('Smoking')">
+        <div class="category-icon">🚬</div>
+        <h3>Smoking</h3>
+        <p>18+ Only</p>
+      </div>
+
+      <div class="category-card water" onclick="filterCategory('Soda Water')">
+        <div class="category-icon">💧</div>
+        <h3>Soda & Water</h3>
+        <p>Fresh & Chilled</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PRODUCTS -->
+  
+    
+  </section>
+
+  <section class="products-section">
+    <div class="section-header">
+        <h2>Popular Products</h2>
+        <a href="#">View All</a>
+    </div>
+
+    <!-- Database Products -->
+    <div id="products-container"></div>
+</section>
+
+
+  <!-- BENEFITS -->
+  <section class="benefits">
+
+    <div class="benefit">
+      <span>⚡</span>
+      <div>
+        <strong>Fast Delivery</strong>
+        <p>Delivered in minutes</p>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <span>💰</span>
+      <div>
+        <strong>Best Prices</strong>
+        <p>Great deals everyday</p>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <span>🔒</span>
+      <div>
+        <strong>Safe Payment</strong>
+        <p>100% secure payment</p>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <span>🧊</span>
+      <div>
+        <strong>Always Chilled</strong>
+        <p>Cold drinks delivered cold</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- CART MODAL -->
+  <div class="cart-modal" id="cartModal">
+
+    <div class="cart-content">
+
+      <div class="cart-header">
+        <h2>Your Cart 🛒</h2>
+        <button onclick="closeCart()">✕</button>
+      </div>
+
+      <div id="cartItems"></div>
+
+      <div class="cart-total">
+        <h3>Total: ₹<span id="cartTotal">0</span></h3>
+      </div>
+
+      <button class="checkout-btn" onclick="placeOrder()">
+  Proceed to Checkout →
+</button>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <h2>THANDA<span>XPRESS</span></h2>
+    <p>Cold Drinks • Chips • Smoking • Soda & Water</p>
+    <p>© 2026 ThandaXpress. All Rights Reserved.</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
